@@ -1,0 +1,122 @@
+/* phần gọi thằng có giá trị =1 */
+
+html {
+    font-family: times, "Times New Roman";
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li {
+    list-style:none;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    padding: 0px 0px;
+    height: 80px;
+    align-items: center;
+}
+
+/* phần gọi bằng id có giá trị =10 hoặc cao hơn*/
+
+
+/* khác */
+#logo {
+    flex: 1;
+}
+
+/* menu */
+#menu > li {
+    padding: 0px 12px;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    position: relative;
+}
+#menu {
+    flex: 3;
+    display: flex;
+}
+#menu > li > a {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+/* menuleft */
+#menuleft {
+    flex: 1;
+    display: flex;
+}
+#menuleft > li {
+    padding: 10px; 
+}
+#menuleft > li:first-child {
+    position: relative;
+}
+#menuleft > li:frist-child input {
+    width: 100%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+}
+#menuleft > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+#menuleft > li:last-child img {
+    height: 60px 60px;
+}
+/* phần gọi bằng class có giá trị =100 hoặc cao hơn */
+
+
+/* menu */
+.menu-menu {
+    position: absolute;
+    font-size: 60%;
+    width: 150px;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.3s;
+}
+.menu-menu > ul {
+    padding-left: 20px;
+}
+.menu-menu > li > ul > a {
+    font-weight: normal;
+    font-size: 12px;
+}
+.menu > li:hover .menu-menu {
+    visibility: visible;
+    top: 30px;    
+}
+.staff {
+    position: absolute;
+    font-size: 60%;
+    width: 150px;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.3s;
+}
+.staff > ul {
+    padding-left: 20px;
+}
+.staff > li > a {
+    font-weight: normal;
+    font-size: 15px;
+}
+.menu > li:hover .staff {
+    visibility: visible;
+    top: 30px;    
+}
+
+
+
+
+
+
+
