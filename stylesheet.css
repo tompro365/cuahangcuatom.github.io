@@ -107,9 +107,9 @@ ul {
 
 
 
-.menu > li:hover .staff {
+/* .menu > li:hover .staff {
     visibility: visible;
-    display: block;
+    top: 30px;
 }
 .staff {
     position: absolute;
@@ -117,12 +117,12 @@ ul {
     width: 150px;
     border: 1px solid #ccc;
     width: 150px;
-    height: 20px;
+    height: 10px;
     margin: 200px; 
-    padding: 50px;
-    padding-bottom: 30px;
+    padding: 20px 0 ;
+    padding-bottom: 50px;
     padding-top: 10px;
-    top: -124px;
+    top: -150px;
     visibility: hidden;
     transition: 0.3s;
 }
@@ -132,6 +132,28 @@ ul {
 .staff > li > ul {
     font-weight: normal;
     font-size: 12px;
+} */
+
+.staff {
+    position: absolute;
+    font-size: 60%;
+    width: 200px;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.3s;
+    padding: 10px 0 10px 20px;
+}
+.staff > ul {
+    padding-left: 20px;
+}
+.staff > li > ul > a {
+    font-weight: normal;
+    font-size: 12px;
+}
+.menu > li:hover .staff {
+    visibility: visible;
+    top: 30px;    
 }
 
 
