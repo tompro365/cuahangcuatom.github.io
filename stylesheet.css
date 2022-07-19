@@ -1,48 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhà hàng của Tôm</title>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-<header>
-    <!-- <script>
-        alert("Hãy chú ý từng nội dùng nhỏ nhất");
-    </script> -->
-    <div id="logo">
-       <img src="dream.jpeg" alt="dream" heighthe="200px" width="150px">
-    </div>
-    <div id="menu" class="menu">
-        <li><a href="">Giới thiệu</a></li>         
-        <li><a href="">Menu</a>
-            <ul class="menu-menu">
-                <li><a href="">Free</a></li>
-                <li><a href="">Dưới 100k</a></li>
-                <li><a href="">Dưới 500k</a></li>
-                <li><a href="">Dưới 1tr</a></li>
-                <li><a href="">Dưới 10tr</a></li>
-                <li><a href="">Dưới 100tr</a></li>
-                <li><a href="">Trên 1 tỷ</a></li>
-            </ul>
-        </li>               
-        <li><a href="">Nhân sự</a></li>       
-            <ul class="staff">
-                <li><a href="">Giới thiệu công việc</a></li>
-                <li><a href="">Tuyển nhân viên</a></li>
-            </ul>    
-        <li><a href="">Dịch vụ</a></li>          
-        <li><a href="">Quy định</a></li>         
-        <li><a href="">Điểm thưởng</a></li>    
-        <li><a href="">Địa chỉ</a></li>   
-        <li><a href="">Đặt hàng</a></li>
-    </div>
-    <div id="menuleft" class="menuleft">
-        <li><input type="text" placeholder="tìm kiếm"></li>
-        <li> <a class="search"href=""></a> <img src="tìm kiếm.jpeg" alt="tìm kiếm" width="25px" height="25px"/></li>
-    </div>
-</header>
-</body>
-</html>
+/* phần gọi thằng có giá trị =1 */
+
+html {
+    font-family: times, "Times New Roman";
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li {
+    list-style:none;
+    text-align: -webkit-match-parent;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    padding: 0px 0px;
+    height: 80px;
+    align-items: center;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/* phần gọi bằng id có giá trị =10 hoặc cao hơn*/
+
+
+/* khác */
+#logo {
+    flex: 1;
+}
+
+/* menu */
+#menu > li {
+    padding: 0px 12px;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    position: relative;
+}
+#menu {
+    flex: 3;
+    display: flex;
+}
+#menu > li > a {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+/* menuleft */
+#menuleft {
+    flex: 1;
+    display: flex;
+}
+#menuleft > li {
+    padding: 10px; 
+}
+#menuleft > li:first-child {
+    position: relative;
+}
+#menuleft > li:frist-child input {
+    width: 100%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+}
+#menuleft > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+#menuleft > li:last-child img {
+    height: 60px 60px;
+}
+/* phần gọi bằng class có giá trị =100 hoặc cao hơn */
+
+
+/* menu */
+.menu-menu {
+    position: absolute;
+    font-size: 60%;
+    width: 150px;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.3s;
+}
+.menu-menu > ul {
+    padding-left: 20px;
+}
+.menu-menu > li > ul > a {
+    font-weight: normal;
+    font-size: 12px;
+}
+.menu > li:hover .menu-menu {
+    visibility: visible;
+    top: 30px;    
+}
+
+
+
+
+.menu > li:hover .staff {
+    visibility: visible;
+    display: block;
+}
+.staff {
+    position: absolute;
+    font-size: 18px;
+    width: 150px;
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 20px;
+    margin: 200px; 
+    padding: 50px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    top: -124px;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.staff > li {
+    padding-left: 20px;
+}
+.staff > li > ul {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
